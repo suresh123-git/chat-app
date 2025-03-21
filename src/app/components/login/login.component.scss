@@ -1,0 +1,85 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 1rem;
+
+  .login-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+
+    h2 {
+      margin: 0 0 2rem 0;
+      text-align: center;
+      color: #1976d2;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      mat-form-field {
+        width: 100%;
+      }
+
+      button {
+        margin-top: 1rem;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+    }
+
+    .toggle-mode {
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+// Dark theme styles
+:host-context(.dark-theme) {
+  .login-container {
+    background-color: #1a1a1a;
+
+    .login-card {
+      background-color: #2d2d2d;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+      h2 {
+        color: #64b5f6;
+      }
+
+      ::ng-deep {
+        .mat-form-field-outline {
+          color: #404040;
+        }
+
+        .mat-form-field-label {
+          color: #808080;
+        }
+
+        .mat-form-field-underline {
+          background-color: #404040;
+        }
+
+        input {
+          color: #ffffff;
+        }
+
+        .mat-error {
+          color: #ff5252;
+        }
+      }
+    }
+  }
+} 
